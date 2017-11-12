@@ -103,6 +103,9 @@ class QcloudApi:
         elif module == 'bgpip':
             from .modules.bgpip import Bgpip
             service = Bgpip(config)
+        elif module == 'tmt':
+            from .modules.tmt import Tmt
+            service = Tmt(config)            
         else:
             raise ValueError('module not exists')
 
